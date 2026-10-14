@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ticket Booking System</title>
+    <link rel="stylesheet" href="task8.css">
+</head>
+<body>
+
+    <h1>Movie Ticket Booking System</h1>
+
+    <div class="box">
+        <h2>Available Movies</h2>
+        <div class="movies-row">
+            <div class="movie-card"><b>3</b><br>₹120</div>
+            <div class="movie-card"><b>Karuppu</b><br>₹150</div>
+            <div class="movie-card"><b>Dude</b><br>₹180</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Book Tickets</h2>
+        <p id="error">Please fill all fields and enter at least 1 ticket!</p>
+
+        <form id="bookingForm">
+            <label>Select Movie:</label>
+            <select id="movie">
+                <option value="">-- Choose Movie --</option>
+                <option value="3" data-price="120">3 (₹120)</option>
+                <option value="Karuppu" data-price="150">Karuppu (₹150)</option>
+                <option value="Dude" data-price="180">Dude (₹180)</option>
+            </select>
+
+            <label>Select Showtime:</label>
+            <select id="time">
+                <option value="">-- Choose Time --</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="05:00 PM">05:00 PM</option>
+            </select>
+
+            <label>Email Address:</label>
+            <input type="email" id="email" placeholder="Enter email">
+
+            <label>Number of Tickets:</label>
+            <input type="number" id="tickets" placeholder="Enter quantity" min="1">
+
+            <p>Total Price: <span id="total">₹0</span></p>
+            <button type="submit">Book Tickets</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2 id="count">Your Bookings (0)</h2>
+        <div id="list">No bookings yet.</div>
+    </div>
+
+    <script src="task8.js"></script>
+</body>
+</html>

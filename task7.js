@@ -1,6 +1,6 @@
 
 const bgColours = ["white", "lightblue" ,"lightgreen"];
-let colorIndex = 0;
+    let colorIndex =1;
 
 function updateCount() {
     const count = document.getElementById("missionList").children.length;
@@ -27,8 +27,7 @@ function addMission() {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = function(e) {
-        e.stopPropagation(); 
+    deleteBtn.onclick = function() { 
         li.remove();
         updateCount();
     };
